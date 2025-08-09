@@ -37,8 +37,8 @@ def main():
     thread_count = console.input("[yellow]Jumlah thread (contoh: 100): [/yellow]")
     try:
         thread_count = int(thread_count)
-        if thread_count < 1 or thread_count > 1000:
-            console.print("[red]Thread harus antara 1-1000![/red]")
+        if thread_count < 1 or thread_count > 10000:
+            console.print("[red]Thread harus antara 1-10000![/red]")
             return
     except:
         console.print("[red]Input thread tidak valid![/red]")
@@ -56,7 +56,7 @@ def main():
 
     try:
         while True:
-            time.sleep(0.5)
+            time.sleep(0.2)
     except KeyboardInterrupt:
         console.print("\n[red]Menghentikan serangan...[/red]")
         stop_event.set()
